@@ -27,7 +27,7 @@
 </body>
 <script>
     //Selected Outputs
-    const coutputColumnSelect=document.querySelector("#outputColumn")
+    const outputColumnSelect=document.querySelector("#outputColumn")
     //Selected Inputs
     const timeSelect=document.querySelector("#time")
     const dateSelect=document.querySelector("#date")
@@ -38,6 +38,19 @@
     fontdateSize.addEventListener('input', updateBox)
     inputFile.addEventListener('input', updateBox)
     discBox.addEventListener('input', updateBox)
+    //functions
+    function updateBox(){
+        //Get Values
+        const time=(timeSelect.value)
+        const date=(dateSelect.value)
+        const inputFile=(inputFileSelect.value)
+        const discBox=(discBoxSelect.value)
+        //Update Box
+        outputColumn.innerHTML=
+        `
+        
+        `
+    }
 </script>
 <style>
     /*General*/
@@ -64,6 +77,9 @@
         border: 1px solid;
         height: auto;
         width: 17em;
+    }
+    p1{
+        color: red;
     }
 </style>
 </html>
