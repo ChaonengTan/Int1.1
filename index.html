@@ -6,12 +6,12 @@
     <title>Car Crash Frame</title>
 </head>
 <body>
+    <h2>Car Crash Frame</h2>
     <ul>
         <li>
             <div id="inputColumn">
-                <h2>Car Crash Frame</h2>
                 <label for="timeDate">Time/Date</label>
-                <input id="timeDate" type="time"><input id="timeDate" type="date">
+                <input id="time" type="time"><input id="date" type="date">
                 <label for="inputFile">Image/Video</label>
                 <input id="inputFile" type="file">
                 <label for="discBox">Discription</label>
@@ -19,15 +19,25 @@
             </div>
         </li>
         <li>
-            <div id="outputColumn">
-                <textarea name="" id="" cols="60" rows="17"></textarea>
+            <div id="outputColumn" contentEditable="true">
                 <!--Output Column-->
             </div>
         </li>
     </ul>
 </body>
 <script>
-
+    //Selected Outputs
+    const coutputColumnSelect=document.querySelector("#outputColumn")
+    //Selected Inputs
+    const timeSelect=document.querySelector("#time")
+    const dateSelect=document.querySelector("#date")
+    const inputFileSelect=document.querySelector("#inputFile")
+    const discBoxSelect=document.querySelector("#discBox")
+    //Event Handler
+    time.addEventListener('input', updateBox)
+    fontdateSize.addEventListener('input', updateBox)
+    inputFile.addEventListener('input', updateBox)
+    discBox.addEventListener('input', updateBox)
 </script>
 <style>
     /*General*/
@@ -35,6 +45,9 @@
         list-style: none;
     }
     /*Structure*/
+    h2{
+        text-align: center;
+    }
     div{
         display: flex;
         flex-direction: column;
@@ -43,8 +56,14 @@
     ul{
         display: flex;
         flex-direction: row;
-        align-items: flex-end;
+        align-items: flex-start;
         justify-content: center;
+    }
+    /*Output Column*/
+    div#outputColumn{
+        border: 1px solid;
+        height: auto;
+        width: 17em;
     }
 </style>
 </html>
