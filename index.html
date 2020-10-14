@@ -3,9 +3,48 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Car Crash Frame</title>
 </head>
 <body>
-    
+    <ul>
+        <li>
+            <div id="inputColumn">
+                <h2>Car Crash Frame</h2>
+                <label for="timeDate">Time/Date</label>
+                <input id="timeDate" type="time"><input id="timeDate" type="date">
+                <label for="inputFile">Image/Video</label>
+                <input id="inputFile" type="file">
+                <label for="discBox">Discription</label>
+                <textarea id="discBox" cols="60" rows="10"></textarea>
+            </div>
+        </li>
+        <li>
+            <div id="outputColumn">
+                <textarea name="" id="" cols="60" rows="17"></textarea>
+                <!--Output Column-->
+            </div>
+        </li>
+    </ul>
 </body>
+<script>
+
+</script>
+<style>
+    /*General*/
+    ul{
+        list-style: none;
+    }
+    /*Structure*/
+    div{
+        display: flex;
+        flex-direction: column;
+        padding: 0 1em 0 1em;
+    }
+    ul{
+        display: flex;
+        flex-direction: row;
+        align-items: flex-end;
+        justify-content: center;
+    }
+</style>
 </html>
