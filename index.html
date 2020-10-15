@@ -3,136 +3,62 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Car Crash Frame</title>
+    <title>Home</title>
 </head>
 <body>
-    <h2>Car Crash Frame</h2>
-    <ul>
-        <li>
-            <div id="inputColumn">
-                <label for="flName">Full Name</label>
-                <input id="flName" type="text">
-                <label for="pNumber">Policy Number</label>
-                <input id="pNumber" type="number">
-                <label>Policy Start/End Date</label>
-                <ul>
-                    <li>Start: <input id="startDate" type="date"></li>
-                    <li>End: <input id="endDate" type="date"></li>
-                </ul>
-                <label>Time/Date</label>
-                <ul>
-                    <li><input id="time" type="time"><input id="date" type="date"></li>
-                </ul>
-                <label>Drivers License/Plate Number</label>
-                <ul>
-                    <li>Yours: <input id="myLicence" type="text"><input id="myPlate" type="text"></li>
-                    <li>Theirs: <input id="theirLicence" type="text"><input id="theirPlate" type="text"></li>
-                </ul>
-                <label for="inputFile">Image/Video</label>
-                <input id="inputFile" type="file">
-                <label for="discBox">Discription</label>
-                <textarea id="discBox" cols="60" rows="10"></textarea>
-            </div>
-        </li>
-        <li>
-            <div id="outputColumn" contentEditable="true">
-                <!--Output Column-->
-            </div>
-        </li>
-    </ul>
+    <section id="nav">
+        <ul>
+            <li><a href="index.html"><h1>CCF</h1></a></li>
+            <ul>
+                <li><!--Future Links--></li>
+            </ul>
+        </ul>
+    </section>
+    <section id="content">
+        <ul id="appList">
+            <li>
+                <a href="carCrashFrame.html">
+                    <figure>
+                        <img src="images/ccrash.png" width="200" height="200">
+                        <figcaption>Car Crash Frame</figcaption>
+                    </figure>
+                </a>
+            </li>
+        </ul>
+    </section>
 </body>
-<script>
-    //Selected Outputs
-    const outputColumnSelect=document.querySelector("#outputColumn")
-    //Selected Inputs
-    const myLicenceSelect=document.querySelector("#myLicence")
-    const myPlateSelect=document.querySelector("#myPlate")
-    const theirLicenceSelect=document.querySelector("#theirLicence")
-    const theirPlateSelect=document.querySelector("#theirPlate")
-
-    const nameSelect=document.querySelector("#flName")
-    const pNumberSelect=document.querySelector("#pNumber")
-    const startDateSelect=document.querySelector("#startDate")
-    const endDateSelect=document.querySelector("#endDate")
-    const timeSelect=document.querySelector("#time")
-    const dateSelect=document.querySelector("#date")
-    const inputFileSelect=document.querySelector("#inputFile")
-    const discBoxSelect=document.querySelector("#discBox")
-    //Event Handler
-    myLicence.addEventListener('input', updateBox)
-    myPlate.addEventListener('input', updateBox)
-    theirLicence.addEventListener('input', updateBox)
-    theirPlate.addEventListener('input', updateBox)
-
-    flName.addEventListener('input', updateBox)
-    pNumber.addEventListener('input', updateBox)
-    startDate.addEventListener('input', updateBox)
-    endDate.addEventListener('input', updateBox)
-    time.addEventListener('input', updateBox)
-    date.addEventListener('input', updateBox)
-    inputFile.addEventListener('input', updateBox)
-    discBox.addEventListener('input', updateBox)
-    //functions
-    function updateBox(){
-        //Get Values
-        const myLicence=(myLicenceSelect.value)
-        const myPlate=(myPlateSelect.value)
-        const theirLicence=(theirLicenceSelect.value)
-        const theirPlate=(theirPlateSelect.value)
-
-        const flName=(nameSelect.value)
-        const pNumber=(pNumberSelect.value)
-        const startDate=(startDateSelect.value)
-        const endDate=(endDateSelect.value)
-        const time=(timeSelect.value)
-        const date=(dateSelect.value)
-        const inputFile=(inputFileSelect.value)
-        const discBox=(discBoxSelect.value)
-        console.log(inputFile)
-        //Update Box
-        outputColumn.innerHTML=
-        `
-        <p>Hello my name is ${flName}, my policy number and the policy start/end dates are ${pNumber}, ${startDate}, ${endDate}.</p>
-        <p>
-        Ive gotten into a car accident on ${date} at ${time} with another individual and would like to file a claim.
-        My drivers license and plate number is ${myLicence} and ${myPlate}. Their drivers license and plate number is ${theirLicence} and ${theirPlate}.
-        </p>
-        <p>${discBox}</p>
-        <img src="${inputFile}">
-        `
-    }
-</script>
 <style>
     /*General*/
     ul{
         list-style: none;
-        padding: 0;
     }
-    /*Structure*/
-    h2{
+    body{
+        margin: 0;
         text-align: center;
     }
-    div{
-        display: flex;
-        flex-direction: column;
-        padding: 0 1em 0 1em;
+    a{
+        text-decoration: none;
+        color: black;
     }
-    ul{
+    /*Nav*/
+    section#nav{
+        border-bottom-width: 1px;
+        border-bottom-style: solid;
+    }
+    section#nav ul{
         display: flex;
         flex-direction: row;
-        justify-content: center;
+        justify-content: space-between;
+        margin: 0;
+        align-items: center;
+        margin-right: 1em;
     }
-    /*Input Column*/
-    div#policyDateSec{
+    /*Content*/
+    ul#appList{
         padding: 0;
         display: flex;
         flex-direction: row;
-    }
-    /*Output Column*/
-    div#outputColumn{
-        border: 1px solid;
-        height: auto;
-        width: 17em;
+        justify-content: space-around;
     }
 </style>
 </html>
