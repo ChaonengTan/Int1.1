@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+</head>
+<body>
+    <section id="nav">
+        <ul>
+            <li><a href="index.html"><h1>CCF</h1></a></li>
+            <ul>
+                <li><!--Future Links--></li>
+            </ul>
+        </ul>
+    </section>
+    <section id="aboutMe">
+        <h2>About</h2>
+        <ul>
+            <li>
+                <figure>
+                <img src="images/IMG_20190918_164738.jpg" width="200" height="275">
+                <figcaption>Me</figcaption>
+                </figure>
+            </li>
+            <li>
+                <ul>
+                    <li>Hi! I am Chaoneng Tan, an 18-year-old Chinese-American young-adult male pursuing a software engineer degree and trying to make an impact on the world.<br></li>
+                    <li>I live in Oakland, California and I enjoy playing games, reading light novels, and watching anime.<br></li>
+                    <li>Influenced by the economy around me, my passion for programming stems from creative arts.</li> 
+                </ul>
+            </li>
+        </ul>
+    </section>
+    <section id="ccfInfo">
+        <h2>Why CFF?</h2>
+        <ul>
+            <li>Learn all about it <a href="https://medium.com/@chaoneng.tan/spd-1-1-post-421d096bfd90">here</a>. Or read the short summary Below!</li><br>
+            <li>The process of dealing with car crashes are hectic and forgetting a piece of information could be critical in dealing with it afterwards.</li>
+            <li>Thus this project was created in order to simplify the process to mitigate prolonged irritation.</li>
+            <li>This project was inspired by something a peer of mines worked on in the past and as a growing programmer, I'd thought I'd follow the path of my seniors.</li>
+        </ul>
+    </section>
+</body>
+<style>
+    /*General*/
+    ul{
+        list-style: none;
+    }
+    body{
+        margin: 0;
+        text-align: center;
+    }
+    /*Nav*/
+    section#nav ul{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        margin: 0;
+        align-items: center;
+        margin-right: 1em;
+    }
+    section#nav a{
+        text-decoration: none;
+        color: black;
+    }
+    /*About*/
+    section#aboutMe{
+        background-color: rgb(227, 249, 255);
+        padding: 1em 1em 1em 0;
+    }
+    section#aboutMe ul li:first-child figcaption{
+        opacity: .8;
+    }
+    section#aboutMe ul{
+        display: flex;
+        justify-content: center;
+        flex-direction: row;
+        margin: auto;
+        align-items: center;
+    }
+    section#aboutMe ul li:nth-child(2) ul{
+        display: flex;
+        flex-direction: column;
+    }
+    /*Why CFF*/
+    section#ccfInfo>ul{
+        padding: 0;
+    }
+    section#ccfInfo a{
+        text-decoration: underline;
+        color: blue;
+    }
+</style>
+</html>
